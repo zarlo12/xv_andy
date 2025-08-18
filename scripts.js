@@ -166,7 +166,7 @@ document
 //   });
 
 document.addEventListener("visibilitychange", function () {
-  const audio = document.getElementById("audio-13375-1");
+  const audio = document.getElementById("audio-40730-1");
   console.log("🚀 ~ audio:", audio);
   if (document.visibilityState === "hidden") {
     audio.pause();
