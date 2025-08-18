@@ -14,7 +14,7 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 // Obtener invitados de Firestore
-const querySnapshot = await db.collection("invitadosBodaMiguelZuelania").get();
+const querySnapshot = await db.collection("invitadosXVANDY2025").get();
 const invitados = querySnapshot.docs.map((doc) => ({
   id: doc.id,
   ...doc.data(),
@@ -88,8 +88,8 @@ if (invitado) {
 function enviarWhatsApp(nombre, numeroInvitados) {
   console.log("🚀 ~ enviarWhatsApp ~ numeroInvitados:", numeroInvitados);
   console.log("🚀 ~ enviarWhatsApp ~ nombre:", nombre);
-  const numeroTelefono = "+5219832025287"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje
-  let mensaje = `Hola soy *${nombre}* \n\n Confirmo mis acompañantes: ${numeroInvitados}`;
+  const numeroTelefono = "+5214731081456"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje
+  let mensaje = `Hola soy *${nombre}* \n\n Confirmo mi asistencia con mis acompañantes: ${numeroInvitados}`;
   if (numeroInvitados == "No podra asistir") {
     mensaje = `Hola soy ${nombre}, confirmo que no podre asistir.`;
   }
@@ -105,7 +105,7 @@ function enviarWhatsApp(nombre, numeroInvitados) {
 function enviarWhatsAppForm(nombre_form, anecdota_form, deseos_form) {
   // console.log("🚀 ~ enviarWhatsApp ~ numeroInvitados:", numeroInvitados);
   // console.log("🚀 ~ enviarWhatsApp ~ nombre:", nombre);
-  const numeroTelefono = "+5219832025287"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje
+  const numeroTelefono = "+5214731081456"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje
   let mensaje = `Hola soy ${nombre_form},\nConfirmó mi invitación. `;
 
   mensaje = mensaje + "\n\n*Anecdota juntos:* " + anecdota_form;

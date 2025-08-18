@@ -46,7 +46,7 @@ async function generarListaInvitados(filtro = "") {
   container.innerHTML = "";
 
   const querySnapshot = await db
-    .collection("invitadosBodaMiguelZuelania")
+    .collection("invitadosXVANDY2025")
     .orderBy("fechaCreacion", "desc")
     .get();
   const invitados = querySnapshot.docs.map((doc) => ({
@@ -199,7 +199,7 @@ window.agregarInvitado = async function () {
   const codigo = generarCodigoFijo(nombreInvitado);
   mostrarCargando(true);
 
-  await db.collection("invitadosBodaMiguelZuelania").add({
+  await db.collection("invitadosXVANDY2025").add({
     invitado: nombreInvitado,
     acompanantes: acompanantes, // Se guarda como un array en Firebase
     codigo,
@@ -220,7 +220,7 @@ window.eliminarInvitado = async function (id) {
   );
   if (confirmacion) {
     mostrarCargando(true);
-    await db.collection("invitadosBodaMiguelZuelania").doc(id).delete();
+    await db.collection("invitadosXVANDY2025").doc(id).delete();
     alert("Invitado eliminado con éxito");
     generarListaInvitados(); // Refrescar la lista
   }
@@ -237,7 +237,7 @@ window.editarInvitado = async function (id) {
     const codigo = generarCodigoFijo(nombreInvitado);
     mostrarCargando(true);
     await db
-      .collection("invitadosBodaMiguelZuelania")
+      .collection("invitadosXVANDY2025")
       .doc(id)
       .update({
         invitado: nombreNuevo,
@@ -256,7 +256,7 @@ window.editarInvitado = async function (id) {
 //     for (const invitado of invitadosImportador) {
 //       const codigo = generarCodigoFijo(invitado.invitado); // Generar código
 
-//       await db.collection("invitadosBodaMiguelZuelania").add({
+//       await db.collection("invitadosXVANDY2025").add({
 //         invitado: invitado.invitado,
 //         numeroInvitados: invitado.numeroInvitados,
 //         codigo: codigo,
