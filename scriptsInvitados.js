@@ -25,7 +25,7 @@ function generarCodigoFijo(nombre) {
   return Math.abs(hash).toString(36).substring(0, 6).toUpperCase(); // Convertir el hash a base 36 y truncar
 }
 
-const baseUrl = "https://boda-zuelania-miguel.vercel.app";
+const baseUrl = "https://xv-andy.vercel.app";
 
 // Función para mostrar y ocultar el indicador de cargadfxg
 function mostrarCargando(mostrar) {
