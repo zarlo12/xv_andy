@@ -132,9 +132,9 @@ document
       return alert("Invitado no registrado.");
     }
 
-    if (checkboxes.length === 0) {
-      return alert("Por favor, selecciona al menos un asistente.");
-    }
+    // if (checkboxes.length === 0) {
+    //   return alert("Por favor, selecciona al menos un asistente.");
+    // }
 
     // Obtener los nombres de los acompañantes desde el label asociado
     const nombresAcompanantes = Array.from(checkboxes)
