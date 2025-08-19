@@ -857,9 +857,13 @@ body:not(.rtl)
 }
 .elementor-40730 .elementor-element.elementor-element-27263674 .cruz-destacada {
   font-style: normal !important;
-  font-size: 22px !important;
+  font-size: 28px !important;
   font-weight: normal !important;
-  font-family: sans-serif;
+  font-family: serif !important;
+  font-variant-emoji: text !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-feature-settings: "liga" off !important;
+  font-feature-settings: "liga" off !important;
 }
 .elementor-40730
   .elementor-element.elementor-element-2c8e5185
